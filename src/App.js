@@ -10,7 +10,7 @@ export const App = () => {
         title="Netflix Originals"
         fetchUrl={requests.fetchNetflixOriginals}
       />
-      <Row title="Trending" fetchUrl={requests.fetchTrending} />
+      {/* <Row title="Trending" fetchUrl={requests.fetchTrending} /> */}
     </div>
   );
 };
