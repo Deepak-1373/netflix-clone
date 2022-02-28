@@ -7,7 +7,6 @@ const baseImageURL = "https://image.tmdb.org/t/p/original";
 export const Row = ({ title, fetchUrl }) => {
   const [movies, setMovies] = useState([]);
 
-  // fetching the data from the API
   useEffect(() => {
     const fetchData = async () => {
       const request = await axios.get(fetchUrl);
@@ -16,14 +15,17 @@ export const Row = ({ title, fetchUrl }) => {
     };
     fetchData();
   }, [fetchUrl]);
-  console.log(movies);
 
   return (
     <div className="row">
       {title}
       <div className="row-posters">
         {movies.map(({ poster_path, name }) => (
-          <img src={`${baseImageURL}${poster_path}`} alt={name} />
+          <img
+            className="row-poster-image"
+            src={`${baseImageURL}${poster_path}`}
+            alt={name}
+          />
         ))}
       </div>
     </div>

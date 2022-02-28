@@ -4,13 +4,13 @@ import requests from "./api/request";
 
 export const App = () => {
   return (
-    <div className="App">
+    <div className="app">
       <h1>Building Netflix Clone 🚀</h1>
       <Row
         title="Netflix Originals"
         fetchUrl={requests.fetchNetflixOriginals}
       />
-      {/* <Row title="Trending" fetchUrl={requests.fetchTrending} /> */}
+      <Row title="Trending" fetchUrl={requests.fetchTrending} />
     </div>
   );
 };
