@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "../api/axios";
+import YouTube from "react-youtube";
 import "./Row.css";
 
 const baseImageURL = "https://image.tmdb.org/t/p/original";
@@ -29,6 +30,7 @@ export const Row = ({ title, fetchUrl, isLargeRow }) => {
           />
         ))}
       </div>
+      <YouTube videoId={trailerUrl} opts={opts} />
     </div>
   );
 };
