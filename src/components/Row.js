@@ -18,10 +18,11 @@ export const Row = ({ title, fetchUrl }) => {
 
   return (
     <div className="row">
-      {title}
+      <h3>{title}</h3>
       <div className="row-posters">
-        {movies.map(({ poster_path, name }) => (
+        {movies.map(({ poster_path, name, id }) => (
           <img
+            key={id}
             className="row-poster-image"
             src={`${baseImageURL}${poster_path}`}
             alt={name}
