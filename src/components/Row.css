@@ -1,9 +1,30 @@
+.row {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
 .row-posters {
   display: flex;
+  padding: 1rem 0;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 2rem;
+}
+
+.row-posters::-webkit-scrollbar {
+  display: none;
 }
 
 .row-poster-image {
   object-fit: contain;
   width: 100%;
-  max-height: 10rem;
+  max-height: 20rem;
+  margin-right: 1rem;
+  transition: transform 450ms;
+  cursor: pointer;
+}
+
+.row-poster-image:hover {
+  transform: scale(1.08);
 }
