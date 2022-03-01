@@ -1,14 +1,16 @@
 import "./App.css";
 import { Row } from "./components/Row";
 import requests from "./api/request";
+import { Banner } from "./components/Banner";
 
 export const App = () => {
   return (
     <div className="app">
-      <h1>Building Netflix Clone 🚀</h1>
+      <Banner />
       <Row
         title="Netflix Originals"
         fetchUrl={requests.fetchNetflixOriginals}
+        isLargeRow
       />
       <Row title="Trending" fetchUrl={requests.fetchTrending} />
       <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />

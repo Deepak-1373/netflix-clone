@@ -1,7 +1,5 @@
 .row {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+  margin-left: 2rem;
 }
 
 .row-posters {
@@ -19,7 +17,7 @@
 .row-poster-image {
   object-fit: contain;
   width: 100%;
-  max-height: 20rem;
+  max-height: 10rem;
   margin-right: 1rem;
   transition: transform 450ms;
   cursor: pointer;
@@ -27,4 +25,12 @@
 
 .row-poster-image:hover {
   transform: scale(1.08);
+}
+
+.row-poster-large {
+  max-height: 25rem;
+}
+
+.row-poster-large:hover {
+  transform: scale(1.09);
 }
