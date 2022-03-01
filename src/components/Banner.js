@@ -18,7 +18,9 @@ export const Banner = () => {
     fetchData();
   }, []);
 
-  console.log(movie);
+  const truncate = (str, n) => {
+    return str?.length > n ? str.substr(0, n - 1) + "..." : str;
+  };
 
   return (
     <header
@@ -33,7 +35,9 @@ export const Banner = () => {
     >
       <div className="banner-contents">
         {/* title */}
-        <h1>{movie?.title || movie?.name || movie?.original_name}</h1>
+        <h1 className="banner-title">
+          {movie?.title || movie?.name || movie?.original_name}
+        </h1>
 
         {/* div > 2 buttons */}
         <div className="banner-buttons">
@@ -42,8 +46,10 @@ export const Banner = () => {
         </div>
 
         {/* description */}
-        <h1 className="banner-description">{movie?.overview}</h1>
+        <h1 className="banner-description">{truncate(movie?.overview, 150)}</h1>
       </div>
+
+      <div className="banner-fadeBottom" />
     </header>
   );
 };
