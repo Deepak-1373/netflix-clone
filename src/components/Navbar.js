@@ -21,10 +21,12 @@ export const Navbar = () => {
       <img
         className="navbar-logo"
         src="https://www.freepnglogos.com/uploads/netflix-logo-0.png"
+        alt="Navbar Logo"
       />
       <img
         className="navbar-avatar"
         src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+        alt="User Logo"
       />
     </div>
   );
